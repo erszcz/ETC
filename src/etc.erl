@@ -33,7 +33,7 @@ main(Args0) ->
         true -> ["+{parse_transform, pe}"];
         false -> []
     end ++ Args0,
-    erl_compile2:compile(Args).
+    erl_compile2:compile_cmdline(Args).
 
 parse_transform(Forms,_) ->
     Module = pp:getModule(Forms),
